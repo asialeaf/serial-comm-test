@@ -1,0 +1,17 @@
+controller:
+  tcp:
+    addr: 192.168.20.187:5022
+    timeout: 5s
+  # serial:
+  #   port: "COM1"
+  #   baud_rate: 9600
+  #   data_bits: 8
+  #   parity: "N"
+  #   top_bits: 1
+
+transmission_mode: "ASCII"
+debug_connection: false
+
+data:
+  request:
+    
