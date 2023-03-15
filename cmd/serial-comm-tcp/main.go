@@ -14,9 +14,12 @@ func main() {
 	tcpClient := tcp.NewTCPClient("192.168.20.187:5022", 5, 5)
 
 	// Request ANALOG DATA(PV, SV, TIME, ETC), SIGNAL SYMBOL '01'
-	b, err := tcpClient.Send([]byte("@010140*\r"))
+	msg := "@010140*\r"
+	fmt.Printf("Send msg: %s\n", msg)
+
+	b, err := tcpClient.Send([]byte(msg))
 	if err == nil {
-		fmt.Printf("Server msg: %s\n", b)
+		fmt.Printf("Recive msg: %s\n", b)
 	} else {
 		fmt.Printf("Failed to get msg: %v\n", err)
 	}
